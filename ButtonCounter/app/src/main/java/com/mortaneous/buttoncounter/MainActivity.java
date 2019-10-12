@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onSaveInstanceState: start");
 
         super.onSaveInstanceState(outState);
-        outState.putCharSequence(TEXT_VIEW_KEY, textView.getText());
-
+//        outState.putCharSequence(TEXT_VIEW_KEY, textView.getText());
+        outState.putString(TEXT_VIEW_KEY, textView.getText().toString());
         Log.d(TAG, "onSaveInstanceState: end");
     }
 
@@ -63,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onRestoreInstanceState: start");
 
         super.onRestoreInstanceState(savedInstanceState);
-        textView.setText(savedInstanceState.getCharSequence(TEXT_VIEW_KEY).toString());
+//        textView.setText(savedInstanceState.getCharSequence(TEXT_VIEW_KEY).toString());
+        textView.setText(savedInstanceState.getString(TEXT_VIEW_KEY));
 
         Log.d(TAG, "onRestoreInstanceState: end");
     }
