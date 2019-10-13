@@ -107,38 +107,42 @@
 
     <Button
         android:id="@+id/buttonAdd"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="+"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSubtract"
         app:layout_constraintStart_toStartOf="@+id/buttonDivide"
         app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
 
     <Button
         android:id="@+id/buttonSubtract"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMultiply"
         app:layout_constraintStart_toStartOf="@+id/buttonDivide"
         app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
 
     <Button
         android:id="@+id/buttonMultiply"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="*"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDivide"
         app:layout_constraintStart_toStartOf="@+id/buttonDivide"
         app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="/"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAC"
         app:layout_constraintStart_toEndOf="@+id/button9"
         app:layout_constraintTop_toBottomOf="@+id/buttonAC" />
 
@@ -157,8 +161,9 @@
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textOperation" />
 
     <Button
         android:id="@+id/buttonC"
@@ -171,10 +176,32 @@
 
     <Button
         android:id="@+id/buttonAC"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:text="AC"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonC"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonC" />
+
+    <TextView
+        android:id="@+id/textOperation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/watermark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Jorvet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
