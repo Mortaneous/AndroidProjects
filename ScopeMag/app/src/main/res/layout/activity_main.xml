@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editScopeFocalLength"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="700"
+        android:textAlignment="textEnd"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/labelScopeFocalLengthUnit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editScopeAperture"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="76"
+        android:textAlignment="textEnd"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="@+id/editScopeFocalLength"
+        app:layout_constraintTop_toBottomOf="@+id/editScopeFocalLength" />
+
+    <EditText
+        android:id="@+id/editEyepiece0"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="20"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/labelEyePieceFocalLength"
+        app:layout_constraintTop_toBottomOf="@+id/labelEyePieceFocalLength" />
+
+    <EditText
+        android:id="@+id/editEyepiece1"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="15"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/editEyepiece0"
+        app:layout_constraintTop_toBottomOf="@+id/editEyepiece0" />
+
+    <EditText
+        android:id="@+id/editEyepiece2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="9"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/editEyepiece1"
+        app:layout_constraintTop_toBottomOf="@+id/editEyepiece1" />
+
+    <EditText
+        android:id="@+id/editEyepiece3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="6"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/editEyepiece2"
+        app:layout_constraintTop_toBottomOf="@+id/editEyepiece2" />
+
+    <EditText
+        android:id="@+id/editMagnification0"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:text="99"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editEyepiece0"
+        app:layout_constraintEnd_toStartOf="@+id/labelX1" />
+
+    <EditText
+        android:id="@+id/editMagnification1"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:text="99"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editEyepiece1"
+        app:layout_constraintEnd_toStartOf="@+id/labelX2" />
+
+    <EditText
+        android:id="@+id/editMagnification2"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:text="99"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editEyepiece2"
+        app:layout_constraintEnd_toStartOf="@+id/labelX3" />
+
+    <EditText
+        android:id="@+id/editMagnification3"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:text="99"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editEyepiece3"
+        app:layout_constraintEnd_toStartOf="@+id/labelX3" />
+
+    <EditText
+        android:id="@+id/editBarlowMagnification0"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:text="999"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editMagnification0"
+        app:layout_constraintEnd_toStartOf="@+id/labelX11" />
+
+    <EditText
+        android:id="@+id/editBarlowMagnification1"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:text="999"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editMagnification1"
+        app:layout_constraintEnd_toStartOf="@+id/labelX22" />
+
+    <EditText
+        android:id="@+id/editBarlowMagnification2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:text="999"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editMagnification2"
+        app:layout_constraintEnd_toStartOf="@+id/labelX33" />
+
+    <EditText
+        android:id="@+id/editBarlowMagnification3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:text="999"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editMagnification3"
+        app:layout_constraintEnd_toStartOf="@+id/labelX44" />
+
+    <TextView
+        android:id="@+id/labelEyepiece1Unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mm"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editEyepiece0"
+        app:layout_constraintStart_toEndOf="@+id/editEyepiece0" />
+
+    <TextView
+        android:id="@+id/labelEyepiece2Unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mm"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editEyepiece1"
+        app:layout_constraintStart_toEndOf="@+id/editEyepiece1" />
+
+    <TextView
+        android:id="@+id/labelEyepiece3Unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mm"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editEyepiece2"
+        app:layout_constraintStart_toEndOf="@+id/editEyepiece2" />
+
+    <TextView
+        android:id="@+id/labelEyepiece3Unit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mm"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editEyepiece3"
+        app:layout_constraintStart_toEndOf="@+id/editEyepiece3" />
+
+    <TextView
+        android:id="@+id/labelX1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="X"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editMagnification0"
+        app:layout_constraintEnd_toStartOf="@+id/labelOpenBracket1" />
+
+    <TextView
+        android:id="@+id/labelX2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editMagnification1"
+        app:layout_constraintEnd_toEndOf="@+id/labelX1" />
+
+    <TextView
+        android:id="@+id/labelX3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editMagnification2"
+        app:layout_constraintEnd_toEndOf="@+id/labelX2" />
+
+    <TextView
+        android:id="@+id/labelX4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editMagnification3"
+        app:layout_constraintEnd_toEndOf="@+id/labelX3" />
+
+    <TextView
+        android:id="@+id/labelX11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification0"
+        app:layout_constraintEnd_toStartOf="@+id/labelCloseBracket1" />
+
+    <TextView
+        android:id="@+id/labelX22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification1"
+        app:layout_constraintEnd_toEndOf="@+id/labelX11" />
+
+    <TextView
+        android:id="@+id/labelX33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification2"
+        app:layout_constraintEnd_toEndOf="@+id/labelX22" />
+
+    <TextView
+        android:id="@+id/labelX44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification3"
+        app:layout_constraintEnd_toEndOf="@+id/labelX33" />
+
+    <TextView
+        android:id="@+id/labelScopeFocalLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Scope Focal Length"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editScopeFocalLength"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/labelScopeAperture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scope Aperture Size"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editScopeAperture"
+        app:layout_constraintStart_toStartOf="@+id/labelScopeFocalLength" />
+
+    <TextView
+        android:id="@+id/labelEyePieceFocalLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Eyepiece Focal Length"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editScopeAperture" />
+
+    <TextView
+        android:id="@+id/labelScopeFocalLengthUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="mm"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editScopeFocalLength"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/labelScopeApertureUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mm"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editScopeAperture"
+        app:layout_constraintStart_toEndOf="@+id/editScopeAperture" />
+
+    <TextView
+        android:id="@+id/labelMagnificationPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Magnification Power"
+        app:layout_constraintBaseline_toBaselineOf="@+id/labelEyePieceFocalLength"
+        app:layout_constraintEnd_toEndOf="@+id/labelCloseBracket1"
+        app:layout_constraintStart_toStartOf="@+id/editMagnification0" />
+
+    <TextView
+        android:id="@+id/labelOpenBracket1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="("
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification0"
+        app:layout_constraintEnd_toStartOf="@+id/editBarlowMagnification0" />
+
+    <TextView
+        android:id="@+id/labelOpenBracket2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="("
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification1"
+        app:layout_constraintEnd_toEndOf="@+id/labelOpenBracket1" />
+
+    <TextView
+        android:id="@+id/labelOpenBracket3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="("
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification2"
+        app:layout_constraintEnd_toEndOf="@+id/labelOpenBracket2" />
+
+    <TextView
+        android:id="@+id/labelOpenBracket4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="("
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification3"
+        app:layout_constraintEnd_toEndOf="@+id/labelOpenBracket3" />
+
+    <TextView
+        android:id="@+id/labelCloseBracket1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text=")"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification0"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/labelCloseBracket2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=")"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification1"
+        app:layout_constraintEnd_toEndOf="@+id/labelCloseBracket1" />
+
+    <TextView
+        android:id="@+id/labelCloseBracket3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=")"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification2"
+        app:layout_constraintEnd_toEndOf="@+id/labelCloseBracket2" />
+
+    <TextView
+        android:id="@+id/labelCloseBracket4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=")"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editBarlowMagnification3"
+        app:layout_constraintEnd_toEndOf="@+id/labelCloseBracket3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
